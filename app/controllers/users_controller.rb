@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
   
-  def show # 追加
-   @user = User.find(params[:id])
+ def show
+    @user = User.find(params[:id])
+    @microposts = @user.microposts.order(created_at: :desc)
   end
   
   def new
@@ -20,17 +21,6 @@ class UsersController < ApplicationController
   
   def edit
     @user = User.find(params[:id])
-  end
-  
-
-
-  def update
-    @user = User.find(params[:id])
-    if @user.update_attributes(user_params)
-      # 更新に成功したときの処理
-    else
-      render 'edit'
-    end
   end
 
   private
