@@ -37,6 +37,11 @@ group :development, :test do
   gem 'byebug'
 end
 
+  gem 'carrierwave',             '0.10.0'
+  gem 'mini_magick',             '3.8.0'
+  gem 'fog',                     '1.36.0'
+  gem 'cloudinary'
+  
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
@@ -44,7 +49,6 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   
-  	
   
 end
 
